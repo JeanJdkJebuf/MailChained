@@ -7,7 +7,7 @@ sys.path.append("conf/")
 import conf_main as text
 
 # import other interfaces
-from interface.Mailbox_provider import MailboxProvider
+import interface.Mailbox_provider as mp
 
 class MainApp(tk.Frame):
     """To activate this tkinter window, instanciate it, then use the launch() function on
@@ -106,10 +106,10 @@ class MainApp(tk.Frame):
 
     # Functions for buttons
     def button_1_command(self):
-        '''this function makes button_1 switch interface to MailboxProvider'''
+        '''this function makes button_1 switches interface to MailboxProvider'''
         self.frame_1.destroy()
 
-        app = MailboxProvider(self.parent)
+        app = mp.MailboxProvider(self.parent)
         app.launch()
 
     def launch(self):
