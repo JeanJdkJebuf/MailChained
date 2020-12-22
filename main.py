@@ -8,11 +8,15 @@ python main.py
 
 Thanks for downloading MailChained. Enjoy !
 """
+import tkinter as tk
 
 from interface.main_interface import MainApp
 
 try:
-    app = MainApp()
+    fen = tk.Tk()
+    fen.title("MailChained")
+
+    app = MainApp(fen)
     app.launch()
 except:
     pass

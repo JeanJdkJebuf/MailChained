@@ -6,14 +6,13 @@ import tkinter as tk
 sys.path.append("conf/")
 import mail_provider_conf as text
 
-class ConvertedFile(tk.Tk):
+class MailboxProvider(tk.Frame):
     """To activate this tkinter window, instanciate it, then use the launch() function on
     your object"""
 
-    def __init__(self):
+    def __init__(self, parent):
         # Building main window
-        tk.Tk.__init__(self)
-        self.title(text.TITLE)
+        tk.Frame.__init__(self)
 
         # Add self.frame_1 as master
         self.add_frame_1()
@@ -52,10 +51,10 @@ class ConvertedFile(tk.Tk):
         self.button_4.grid(column='1', padx='5', pady='5', row='4')
 
     def launch(self):
-        '''used as followed : app = ConvertedFile()
+        '''used as followed : app = MailboxProvider()
         app=launch()'''
         self.mainloop()
 
 if __name__ == '__main__':
-    app = ConvertedFile()
+    app = MailboxProvider()
     app.launch()

@@ -20,4 +20,5 @@ git clone https://github.com/JeanJdkJebuf/MailChained.git
 ## Annex
 
 Trello : https://trello.com/b/c657NyBZ/mailchained
+
 Draw.io : sub-directory `drawio`
